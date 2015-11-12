@@ -4,10 +4,10 @@ public class StarTest {
 		printStar(3);
 		printStar(4);
 
-		printStarRec(3);
-		printStarRec(4);
-		printStarRec(5);
 		printStarRec(6);
+		printStarRec(6);
+		printStarRec(8);
+		printStarRec(20);
 	}
 
 	/*
@@ -48,7 +48,7 @@ public class StarTest {
 		// thus rows = N + 1 (2k+1 is odd)
 		
 		int k = N/2;
-		if (k%2 == 0)
+		if (k%2 == 0) // k has to be an odd number
 			k++;
 
 		System.out.println("k="+k);
