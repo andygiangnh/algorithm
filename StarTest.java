@@ -7,6 +7,7 @@ public class StarTest {
 		printStarRec(3);
 		printStarRec(4);
 		printStarRec(5);
+		printStarRec(6);
 	}
 
 	/*
@@ -47,8 +48,10 @@ public class StarTest {
 		// thus rows = N + 1 (2k+1 is odd)
 		
 		int k = N/2;
-		if (N%2 != 0)
+		if (k%2 == 0)
 			k++;
+
+		System.out.println("k="+k);
 
 		for (int j = 0; j <= N;j++) {
 			for (int i = 0; i <= N; i++) {
@@ -57,7 +60,7 @@ public class StarTest {
 						System.out.print(" ");
 					else if (i <= N/2 + j) {
 						if((i > (N-k)/2 && i <= (N+k)/2) && (j > (N-k)/2 && j <= (N+k)/2))
-							System.out.print("+");
+							System.out.print("-");
 						else
 							System.out.print("*");
 					}
@@ -67,7 +70,7 @@ public class StarTest {
 						System.out.print(" ");
 					else if (i <= N-(j-N/2)) {
 						if((i > (N-k)/2 && i <= (N+k)/2) && (j > (N-k)/2 && j <= (N+k)/2))
-							System.out.print("+");
+							System.out.print("-");
 						else
 							System.out.print("*");
 					}
