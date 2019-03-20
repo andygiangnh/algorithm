@@ -1,11 +1,11 @@
 package com.andy.algorithm;
 import java.util.Set;
 import java.util.HashSet;
-public class RemoveDuplicate {
+public class RemoveDuplicateChar {
 	
 	public static void main(String[] args) {
 		String str = "abfabddacbf";
-		String newStr = "";
+		
 		Set<Character> allChars = new HashSet<>();
 
 		for (int i = 0; i < str.length(); i++) {
@@ -13,6 +13,7 @@ public class RemoveDuplicate {
 			if (allChars.contains(c)) {
 				// remove at char at i
 				str = str.substring(0,i) + str.substring(i+1, str.length());
+				// place the cursor 1 step back as we have remove the duplicated char at index i
 				i--;
 			} else {
 				allChars.add(c);
