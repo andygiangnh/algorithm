@@ -14,6 +14,9 @@ public class FindPair {
 		System.out.println("Found Ar[i]=" + ar[resInt[0]] + ",Ar[j]=" + ar[resInt[1]]);
 	}
 	
+	/*
+	 * return Integer array of 2 position statisfy sum condition
+	 * */
 	private static int[] findPair(int[] ar, int sum) {
 		int i=0, j = ar.length-1;
 		int[] resIntAr = new int[2];
