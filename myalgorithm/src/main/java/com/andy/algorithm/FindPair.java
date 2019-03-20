@@ -1,5 +1,7 @@
 package com.andy.algorithm;
 
+import com.andy.util.NumberUtil;
+
 public class FindPair {
 	
 	public static void main(String[] args) {

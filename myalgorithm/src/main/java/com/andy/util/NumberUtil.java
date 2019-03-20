@@ -1,4 +1,4 @@
-package com.andy.algorithm;
+package com.andy.util;
 
 public class NumberUtil {
 	

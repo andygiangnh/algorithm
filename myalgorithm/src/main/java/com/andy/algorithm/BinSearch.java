@@ -1,5 +1,7 @@
 package com.andy.algorithm;
 
+import com.andy.util.NumberUtil;
+
 public class BinSearch {
 	
 	public static void main(String[] args) {
