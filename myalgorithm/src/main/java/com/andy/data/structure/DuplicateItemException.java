@@ -1,3 +1,4 @@
+package com.andy.data.structure;
 /**
  * Exception class for duplicate item errors
  * in search tree insertions.

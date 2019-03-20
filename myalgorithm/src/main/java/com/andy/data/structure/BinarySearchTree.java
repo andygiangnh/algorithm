@@ -1,3 +1,4 @@
+package com.andy.data.structure;
 // BinarySearchTree class
 //
 // CONSTRUCTION: with no initializer
@@ -42,7 +43,11 @@ public class BinarySearchTree {
      * @throws ItemNotFoundException if x is not found.
      */
     public void remove( Comparable x ) {
-        root = remove( x, root );
+        try {
+			root = remove( x, root );
+		} catch (ItemNotFoundException e) {
+			e.printStackTrace();
+		}
     }
      
     /**
@@ -50,7 +55,11 @@ public class BinarySearchTree {
      * @throws ItemNotFoundException if tree is empty.
      */
     public void removeMin( ) {
-        root = removeMin( root );
+        try {
+			root = removeMin( root );
+		} catch (ItemNotFoundException e) {
+			e.printStackTrace();
+		}
     }
      
     /**
@@ -128,7 +137,7 @@ public class BinarySearchTree {
      * @return the new root.
      * @throws ItemNotFoundException if x is not found.
      */
-    protected BinaryNode remove( Comparable x, BinaryNode t ) {
+    protected BinaryNode remove( Comparable x, BinaryNode t ) throws ItemNotFoundException {
         if( t == null )
             throw new ItemNotFoundException( x.toString( ) );
         if( x.compareTo( t.element ) < 0 )
@@ -150,7 +159,7 @@ public class BinarySearchTree {
      * @return the new root.
      * @throws ItemNotFoundException if x is not found.
      */
-    protected BinaryNode removeMin( BinaryNode t ) {
+    protected BinaryNode removeMin( BinaryNode t ) throws ItemNotFoundException {
         if( t == null )
             throw new ItemNotFoundException( );
         else if( t.left != null ) {

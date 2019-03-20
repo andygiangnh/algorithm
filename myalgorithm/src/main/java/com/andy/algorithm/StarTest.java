@@ -1,3 +1,4 @@
+package com.andy.algorithm;
 public class StarTest {
 	public static void main(String[] args) {
 		printStar(2);
