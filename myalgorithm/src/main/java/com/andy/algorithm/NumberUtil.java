@@ -9,10 +9,13 @@ public class NumberUtil {
 		System.out.println();
 	}
 	
-	public static void initIntArr(int[] ar, int peak) {
+	/*
+	 * Generate an array of sorted integer, increased by @Param maxStep
+	 * */
+	public static void initIntArr(int[] ar, int maxStep) {
 		for(int i=0;i < ar.length;i++) {
 			int j = i>0? i-1:i;
-			ar[i] = ar[j] + (int)(Math.random() * peak);
+			ar[i] = ar[j] + (int)(Math.random() * maxStep);
 		}
 	}	
 

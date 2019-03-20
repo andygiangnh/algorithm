@@ -1,5 +1,5 @@
 package com.andy.algorithm;
-public class StarTest {
+public class PrintShape {
 	public static void main(String[] args) {
 		printStar(2);
 		printStar(3);
